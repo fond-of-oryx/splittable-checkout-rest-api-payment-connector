@@ -2,12 +2,12 @@
 
 namespace FondOfOryx\Zed\SplittableCheckoutRestApiPaymentConnector\Business\Expander;
 
+use ArrayObject;
 use Codeception\Test\Unit;
 use Generated\Shared\Transfer\PaymentTransfer;
 use Generated\Shared\Transfer\QuoteTransfer;
 use Generated\Shared\Transfer\RestPaymentTransfer;
 use Generated\Shared\Transfer\RestSplittableCheckoutRequestTransfer;
-use Laminas\Stdlib\ArrayObject;
 
 class QuoteExpanderTest extends Unit
 {
