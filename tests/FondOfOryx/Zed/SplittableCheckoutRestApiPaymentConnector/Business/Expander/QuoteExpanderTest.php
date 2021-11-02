@@ -22,7 +22,7 @@ class QuoteExpanderTest extends Unit
     protected $quoteTransferMock;
 
     /**
-     * @var \Generated\Shared\Transfer\RestPaymentTransfer[]|\PHPUnit\Framework\MockObject\MockObject[]
+     * @var array<\PHPUnit\Framework\MockObject\MockObject>|array<\Generated\Shared\Transfer\RestPaymentTransfer>
      */
     protected $restPaymentTransferMocks;
 
@@ -86,13 +86,13 @@ class QuoteExpanderTest extends Unit
                     static function (PaymentTransfer $paymentTransfer) use ($paymentProviderName, $paymentMethodName) {
                         return $paymentTransfer->getPaymentProvider() === $paymentProviderName
                             && $paymentTransfer->getPaymentMethod() === $paymentMethodName;
-                    }
-                )
+                    },
+                ),
             )->willReturn($this->quoteTransferMock);
 
         static::assertEquals(
             $this->quoteTransferMock,
-            $this->quoteExpander->expand($this->restSplittableCheckoutRequestTransferMock, $this->quoteTransferMock)
+            $this->quoteExpander->expand($this->restSplittableCheckoutRequestTransferMock, $this->quoteTransferMock),
         );
     }
 
@@ -110,7 +110,7 @@ class QuoteExpanderTest extends Unit
 
         static::assertEquals(
             $this->quoteTransferMock,
-            $this->quoteExpander->expand($this->restSplittableCheckoutRequestTransferMock, $this->quoteTransferMock)
+            $this->quoteExpander->expand($this->restSplittableCheckoutRequestTransferMock, $this->quoteTransferMock),
         );
     }
 }
