@@ -10,7 +10,7 @@
   ],
   "require": {
     "php": ">=8.0",
-    "fond-of-oryx/splittable-checkout-rest-api-extension": "^1.0.0"
+    "fond-of-oryx/splittable-checkout-rest-api-extension": "^1.0.0 || ^2.0.0"
   },
   "require-dev": {
     "fond-of-codeception/spryker": "^1.0",
