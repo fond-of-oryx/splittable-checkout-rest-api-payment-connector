@@ -16,4 +16,9 @@
         <property name="paymentMethodName" type="string"/>
         <property name="paymentSelection" type="string"/>
     </transfer>
+
+    <transfer name="Payment">
+        <property name="paymentProvider" type="string"/>
+        <property name="paymentMethod" type="string"/>
+    </transfer>
 </transfers>
